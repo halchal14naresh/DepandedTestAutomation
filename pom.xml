@@ -65,7 +65,7 @@
  
 
   <dependencies>
- <dependency>
+<dependency>
   <groupId>mytest2</groupId>
   <artifactId>mytest2</artifactId>
   <version>0.0.1-SNAPSHOT</version>
