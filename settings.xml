@@ -1,21 +1,16 @@
-<profile>
-  <id>nexus</id>
-  <!--Enable snapshots for the built in central repo to direct -->
-  <!--all requests to nexus via the mirror -->
-  <repositories>
-    <repository>
-      <id>gitlab-maven</id>
-    <url>https://gitlab.com/api/v4/projects/35259489/packages/maven</url>
-      <releases><enabled>true</enabled><updatePolicy>always</updatePolicy></releases>
-      <snapshots><enabled>true</enabled><updatePolicy>always</updatePolicy></snapshots>
-    </repository>
-  </repositories>
- <pluginRepositories>
-    <pluginRepository>
-     <id>gitlab-maven</id>
-    <url>https://gitlab.com/api/v4/projects/35259489/packages/maven</url>
-      <releases><enabled>true</enabled><updatePolicy>always</updatePolicy></releases>
-      <snapshots><enabled>true</enabled><updatePolicy>always</updatePolicy></snapshots>
-    </pluginRepository>
-  </pluginRepositories>
-</profile>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd">
+  <servers>
+     <server>
+       <id>gitlab-com</id>
+       <configuration>
+         <httpHeaders>
+           <property>
+             <name>Private-Token</name>
+             <value>glpat-C3LJzSjYtLruAabyyyEv</value>
+           </property>
+         </httpHeaders>
+       </configuration>
+     </server>
+   </servers>
+ </settings>
